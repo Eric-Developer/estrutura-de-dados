@@ -3,7 +3,7 @@
 #include <stdio.h>
   
   Fila* criaFila(){
-   Fila *fila = (Fila*) malloc(sizeof(Fila));
+  Fila *fila = (Fila*) malloc(sizeof(Fila));
  fila -> inicio = NULL;
  fila -> FIM = NULL;
 
@@ -51,7 +51,7 @@ int main(){
     Fila *fila = criaFila();
 
 do {
-    printf("\n[0] para parar");
+    printf("\n[0]para parar");
     printf("\n[1]para converter");
     printf("\nescolha uma opcao:");
     scanf("%d",&opcao);

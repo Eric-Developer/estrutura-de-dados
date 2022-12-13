@@ -55,9 +55,9 @@ void cadastrarContato(int registro){
 
 void listarContatos(int qtdeContatos){
     int i;
-    int contagem = 1;
+    int cont = 1;
     for(i = 0; i < qtdeContatos; i++){
-        printf("\n\tContato nº: %d\n", contagem++);
+        printf("\n\tContato nº: %d\n", cont++);
         printf("\tNome: %s\n", pessoa[i].nome);
         printf("\tTelefone: %s\n", pessoa[i].telefone);
         printf("\tEmail: %s\n", pessoa[i].email);
@@ -71,7 +71,7 @@ void exibirContato(int indice){
     printf("\tEmail: %s\n", pessoa[indice].email);
 }
 
-int pesquisarContato(int qtdeContatos, char* nomeBuscado){
+int buscarContato(int qtdeContatos, char* nomeBuscado){
     int i;
 
     for(i = 0; i < qtdeContatos; i++){
@@ -82,7 +82,7 @@ int pesquisarContato(int qtdeContatos, char* nomeBuscado){
 }
 
 
-int leitor(){
+int ler(){
     int opcao;
 
     printf("\n\tOpção escolhida: ");
@@ -94,25 +94,25 @@ int leitor(){
 
 int main(){
     char nome[MAX];
-    int numeroRegistro = 0;
-    int opcaoEscolhida;
+    int registro = 0;
+    int opcao;
     int indice;
 
     do{
         exibirMenu();
-        opcaoEscolhida = leitor();
+        opcao = ler();
 
-        switch(opcaoEscolhida){
+        switch(opcao){
             case 1:
-                cadastrarContato(numeroRegistro++);
+                cadastrarContato(registro++);
                 break;
             case 2:
-                listarContatos(numeroRegistro);
+                listarContatos(registro);
                 break;
             case 3:
                 printf("\n\tNome: ");
                 scanf("%[^\n]s", nome);
-                indice = pesquisarContato(numeroRegistro, nome);
+                indice = buscarContato(registro, nome);
 
                 if(indice >= 0 && indice <= 99)
                     exibirContato(indice);
@@ -126,8 +126,8 @@ int main(){
             default:
                 printf("Opção inválida!");
                 exibirMenu();
-                opcaoEscolhida = leitor();
+                opcao = ler();
         }
 
-    }while(opcaoEscolhida != 0);
+    }while(opcao != 0);
 }

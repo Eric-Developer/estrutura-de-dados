@@ -1,7 +1,7 @@
   
 struct list{
     int i;
-    struct list * proximo;
+    struct list* proximo;
 };
 typedef struct list Lista;
 
