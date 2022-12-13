@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #define MAX 100
 
-
 int *p;    
 int topo;   
 int *base;  

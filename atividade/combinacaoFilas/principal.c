@@ -74,51 +74,17 @@ return 0;
 
     Fila* fila1 = criaFila();
     Fila* fila2 = criaFila();
- /*insereFila(fila1 ,1);
-insereFila(fila1 ,2);
-    insereFila(fila1 ,3);
+   insereFila(fila1 ,1);
+   insereFila(fila1 ,2);
+    insereFila(fila2 ,3);
     insereFila(fila2 ,4);
-    insereFila(fila2 ,5);
-    insereFila(fila2 ,9);
     combinacaoDeFilaAlternada(fila1,fila2);
-    printf("FILA 1:");
+    printf("FILA:");
     while(! filaVazia(fila1) ){
     printf("%d ",fila1 -> Inicio ->i);
     removeFila(fila1);
-    }*/
-   int op1 = 0;
-   int fi1 = 0;
-   int fi2 = 0;
-
-  do{
-printf("opcao:");
-scanf("%d",&op1);
-
-switch(op1){
-    case 1:
-    printf("informe numero da fila1");
-    scanf("%d",&fi1);
-        printf("informe numero da fila2");
-
-    scanf("%d",&fi2);
-    insereFila(fila1,fi1);
-    insereFila(fila2,fi2);
-    combinacaoDeFilaAlternada(fila1,fila2);
-    break;
-    case 2:
-    printf("FILA 1:");
-    while(! filaVazia(fila1) ){
-    printf("%d ",fila1 -> Inicio ->i);
-    removeFila(fila1);
-    }
-    break;
-    case 3:
- removeFila(fila1);
- break;
-}
-
-    }
-    while(op1 != 0);
+    
+   
 
     return 0;
  }  
