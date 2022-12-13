@@ -84,7 +84,7 @@ return 0;
     printf("%d ",fila1 -> Inicio ->i);
     removeFila(fila1);
     
-   
+    }
 
     return 0;
  }  
