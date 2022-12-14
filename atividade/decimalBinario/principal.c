@@ -48,9 +48,10 @@ void converter(Fila *fila, int num){
 int main(){
 
     int opcao = 0;
-    Fila *fila = criaFila();
 
 do {
+      Fila *fila = criaFila();
+
     printf("\n[0]para parar");
     printf("\n[1]para converter");
     printf("\nescolha uma opcao:");
